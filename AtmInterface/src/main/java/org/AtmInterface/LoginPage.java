@@ -101,7 +101,7 @@ public class LoginPage extends JFrame implements ActionListener {
 
            }
            else if(ob.getSource() == signUp){
-
+               System.out.println("hello");
            }
     }
 
