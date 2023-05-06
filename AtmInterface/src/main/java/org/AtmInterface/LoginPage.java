@@ -21,7 +21,7 @@ public class LoginPage extends JFrame implements ActionListener {
         add(i4);                                          //add means to add the image in frame without jframe we cant add image in frame
 
 
-        //jlabel mainly used to write content in the frame
+       // jlabel mainly used to write content in the frame
         JLabel text1 = new JLabel("WELCOME TO THE BOB WORLD");
         add(text1);
         text1.setFont(new Font("Osward",Font.BOLD,28));
@@ -31,13 +31,18 @@ public class LoginPage extends JFrame implements ActionListener {
         JLabel text2 = new JLabel("BANK OF BARODA ATM ");
         add(text2);
         text2.setFont(new Font("Osward",Font.BOLD,28));
-        text2.setBounds(170,80,550,50);
+        text2.setBounds(170,70,400,50);
+
+//        JTextField t = new JTextField();
+//        t.setBounds(80,180,140,20);
+//        t.setBackground(Color.BLACK);
+//        add(t);
 
 
         JLabel cardno = new JLabel("CARD NO : ");
         add(cardno);
         cardno.setFont(new Font("Raleway",Font.BOLD,20));
-        cardno.setBounds(80,180,180,20);
+        cardno.setBounds(80,180,140,20);
 
 
         cardNoTextField = new JTextField();
@@ -101,7 +106,7 @@ public class LoginPage extends JFrame implements ActionListener {
 
            }
            else if(ob.getSource() == signUp){
-               System.out.println("hello");
+
            }
     }
 
