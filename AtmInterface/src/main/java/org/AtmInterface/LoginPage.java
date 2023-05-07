@@ -99,18 +99,20 @@ public class LoginPage extends JFrame implements ActionListener {
     //this function is used to tell us what we have to do when the user click on the button (sign in,login etc) i.e., which action we have to perform
     public void actionPerformed(ActionEvent ob){        //ob is the object of ActionEvent class
            if(ob.getSource() == clear){
-                  cardNoTextField.setText("");
+                  cardNoTextField.setText("");          //setText() function is used to set the value in textField
                   passField.setText("");
            }
            else if(ob.getSource() == signIn){
 
            }
            else if(ob.getSource() == signUp){
-
+               setVisible(false);
+               new SignUpFirst().setVisible(true);
            }
     }
 
     public static void main(String[] args) {
+
         new LoginPage();
     }
 }
