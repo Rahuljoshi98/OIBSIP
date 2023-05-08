@@ -252,8 +252,10 @@ public class SignUpFirst extends JFrame implements ActionListener {
                     //after running all the above statements the data will go in SignUp table in mySql because we are using  String query = "insert into SignUp values......." in else statement
                     else{
                            CreateConn conob = new CreateConn();
-                           String query = "insert into SignUp values ('"+formNumber+"','"+uname+"','"+uFather+"','"+userDob+"','"+findGender+"','"+uemail+"','"+uMaritalSta+"','"+Uaddress+"','"+Ucity+"','"+Ustate+"','"+pin+"')";
+                           String query = "insert into SignUpOne values ('"+formNumber+"','"+uname+"','"+uFather+"','"+userDob+"','"+findGender+"','"+uemail+"','"+uMaritalSta+"','"+Uaddress+"','"+Ucity+"','"+Ustate+"','"+pin+"')";
                            conob.st.executeUpdate(query);     //using st reference to insert the value in database and executeUpdate(query) update the table in mysql
+                           setVisible(false);
+                           new SignUpTwo(formNumber).setVisible(true);
                     }
                 }
 

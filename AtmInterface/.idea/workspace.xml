@@ -73,9 +73,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SignUpTwo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.AtmInterface.SignUpTwo" />
+      <module name="AtmInterface" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.AtmInterface.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.LoginPage" />
+        <item itemvalue="Application.SignUpTwo" />
         <item itemvalue="Application.SignUpFirst" />
       </list>
     </recent_temporary>

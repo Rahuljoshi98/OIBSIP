@@ -33,11 +33,6 @@ public class LoginPage extends JFrame implements ActionListener {
         text2.setFont(new Font("Osward",Font.BOLD,28));
         text2.setBounds(170,70,400,50);
 
-//        JTextField t = new JTextField();
-//        t.setBounds(80,180,140,20);
-//        t.setBackground(Color.BLACK);
-//        add(t);
-
 
         JLabel cardno = new JLabel("CARD NO : ");
         add(cardno);
