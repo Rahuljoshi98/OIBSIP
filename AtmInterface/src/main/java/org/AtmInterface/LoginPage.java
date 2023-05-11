@@ -2,6 +2,7 @@ package org.AtmInterface;
 import javax.swing.*;
 import java.awt.*;          //image class exist in awt package so we import java.awt package
 import java.awt.event.*;
+import java.sql.ResultSet;
 
 public class LoginPage extends JFrame implements ActionListener {
 
@@ -98,7 +99,25 @@ public class LoginPage extends JFrame implements ActionListener {
                   passField.setText("");
            }
            else if(ob.getSource() == signIn){
+                   CreateConn conn = new CreateConn();
+                   String cardNo = cardNoTextField.getText();
+                   String pinNo = passField.getText();
+                   String query = "select * from login where cardNumber = '"+cardNo+"' and pin = '"+pinNo+"' ";
+                   try{
+                      // conn.st.executeQuery(query);    //The above command is a  ddl command so we will use the function executeQuery rather than executeUpdate
+                       ResultSet result = conn.st.executeQuery(query);  //ResultSet is a datatype which store the response of executeQuery function and ResultSet belongs to the java sql package so we have to import it
 
+                       if(result.next()){                                //if the entered data matched then (it is extracted by using result.next())
+                           setVisible(false);                           //close the current frame
+                           new Transactions(pinNo).setVisible(true);    //here we are passing the pin because we need pin in next transaction
+                       }
+                       else{
+                           JOptionPane.showMessageDialog(null,"Incorrect Card No or pin");
+                       }
+                   }
+                   catch (Exception e){
+                       System.out.println(e);
+                   }
            }
            else if(ob.getSource() == signUp){
                setVisible(false);

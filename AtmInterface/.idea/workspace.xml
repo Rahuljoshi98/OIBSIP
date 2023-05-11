@@ -46,7 +46,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.LoginPage">
+  <component name="RunManager" selected="Application.SignUpThird">
     <configuration name="LoginPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.AtmInterface.LoginPage" />
       <module name="AtmInterface" />
@@ -73,6 +73,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SignUpThird" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.AtmInterface.SignUpThird" />
+      <module name="AtmInterface" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.AtmInterface.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SignUpTwo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.AtmInterface.SignUpTwo" />
       <module name="AtmInterface" />
@@ -86,9 +99,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Transactions" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.AtmInterface.Transactions" />
+      <module name="AtmInterface" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.AtmInterface.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SignUpThird" />
         <item itemvalue="Application.LoginPage" />
+        <item itemvalue="Application.Transactions" />
         <item itemvalue="Application.SignUpTwo" />
         <item itemvalue="Application.SignUpFirst" />
       </list>

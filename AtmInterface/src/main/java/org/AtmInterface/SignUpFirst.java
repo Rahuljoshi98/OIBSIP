@@ -14,7 +14,7 @@ public class SignUpFirst extends JFrame implements ActionListener {
     SignUpFirst(){
         setLayout(null);
         Random random = new Random();
-        randomNo = Math.abs((random.nextLong() % 8000L) + 1100L);    //math.abs is used to convert the no into positive if it is negative
+        randomNo = Math.abs((random.nextLong() % 9000L) + 1000L);    //math.abs is used to convert the no into positive if it is negative
 
 
         JLabel formNo = new JLabel("APPLICATION NO : " + randomNo);      //random no is added to provide different application no to different applications
