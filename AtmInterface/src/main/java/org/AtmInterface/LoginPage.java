@@ -18,6 +18,7 @@ public class LoginPage extends JFrame implements ActionListener {
         Image i2 = image.getImage().getScaledInstance(100,100,Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         JLabel i4 = new JLabel(i3);
+
         i4.setBounds(50,20,100,100);     //here we use jlabel to set the image i.e., to set the boundary from the frame
         add(i4);                                          //add means to add the image in frame without jframe we cant add image in frame
 
@@ -43,8 +44,9 @@ public class LoginPage extends JFrame implements ActionListener {
 
         cardNoTextField = new JTextField();
         cardNoTextField.setBounds(240,182,240,25);
-        add(cardNoTextField);
+
         cardNoTextField.setFont(new Font("Areal",Font.BOLD,13));
+        add(cardNoTextField);
 
 
         JLabel password = new JLabel("PIN :");
@@ -55,8 +57,9 @@ public class LoginPage extends JFrame implements ActionListener {
 
         passField =  new JPasswordField();
         passField.setBounds(240,262,240,25);
-        add(passField);
+
         passField.setFont(new Font("Areal",Font.BOLD,13));
+        add(passField);
 
 
         signIn = new JButton("SIGN IN");

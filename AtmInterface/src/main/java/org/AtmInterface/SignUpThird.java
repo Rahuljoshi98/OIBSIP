@@ -170,9 +170,9 @@ public class SignUpThird extends JFrame implements ActionListener {
                }
 
                Random random = new Random();
-               String userCardNo =""+ Math.abs((random.nextLong()%900000000L) +5638967200000000L );
+               String userCardNo =""+ Math.abs(Math.abs(random.nextLong()%900000000L) +5638967200000000L );
 
-               String userPinNo = "" + Math.abs((random.nextLong() % 9000L) + 1000L);
+               String userPinNo = "" + Math.abs(Math.abs(random.nextLong() % 9000L) + 1000L);
 
                String facility = "";
                if(atmCheckbox.isSelected()){
@@ -204,7 +204,7 @@ public class SignUpThird extends JFrame implements ActionListener {
 
                        JOptionPane.showMessageDialog(null, "Form NO : " + formNo + "\n Card no : " + userCardNo + "\n PIN : " + userPinNo);
                        setVisible(false);
-                       new LoginPage().setVisible(true);
+                       new DepositAccount(userPinNo).setVisible(true);
 
                }
                catch (Exception e){
@@ -212,7 +212,8 @@ public class SignUpThird extends JFrame implements ActionListener {
                }
         }
         else if(acEvent.getSource() ==  cancel){
-
+                setVisible(false);
+                new LoginPage().setVisible(true);
         }
     }
     public static void main(String[] args) {

@@ -117,9 +117,29 @@ public class Transactions extends JFrame implements ActionListener {
     }
 
 
-    public void actionPerformed(ActionEvent ae){
-           if(ae.getSource()==exitButton){
+    public void actionPerformed(ActionEvent actione){
+           if(actione.getSource()==exitButton){
                System.exit(0);
+           }
+           else if(actione.getSource() == depositButton){
+               setVisible(false);
+               new DepositAccount(transactionPin).setVisible(true);
+           }
+           else if(actione.getSource() == cashWithDrawlButton){
+               setVisible(false);
+               new CashWithdrawl(transactionPin).setVisible(true);
+           }
+           else if(actione.getSource() == fastWithDrawlButton){
+               setVisible(false);
+               new FastCash(transactionPin).setVisible(true);
+           }
+           else if(actione.getSource() == pinChangeButton){
+               setVisible(false);
+               new ChangePin(transactionPin).setVisible(true);
+           }
+           else if(actione.getSource()==balanceEnquiryButton){
+               setVisible(false);
+               new BalanceEnquiry(transactionPin).setVisible(true);
            }
     }
 
