@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.ResultSet;
 import java.util.Date;
 
 public class CashWithdrawl extends JFrame implements ActionListener {
@@ -57,16 +58,39 @@ public class CashWithdrawl extends JFrame implements ActionListener {
         if(ae.getSource() == cashWithdrawlButton){
             String amount = amountTextField.getText();
             Date date = new Date();       //to check the date in which we deposit the amount
+            int balance = 0;
+            int a = Integer.parseInt(amount);
+
             try {
                 if (amount.equals("")) {
                     JOptionPane.showMessageDialog(null, "Please enter the amount you want to Withdraw");
                 } else {
                     CreateConn conn = new CreateConn();
-                    String query = "insert into transaction values ('" + pin + "','" + date + "','Withdrawl','" + amount + "')";
-                    conn.st.executeUpdate(query);
-                    JOptionPane.showMessageDialog(null,"Rs "+amount+" Withdraw Successfully");
-                    setVisible(false);
-                    new Transactions(pin).setVisible(true);
+
+                    ResultSet r = conn.st.executeQuery("select * from transaction where pin ='" + pin + "'");
+                    while (r.next()) {
+                        if (r.getString("type_of_transaction").equals("Deposit")) {
+                            balance += Integer.parseInt(r.getString("amount"));
+                        } else {
+                            balance -= Integer.parseInt(r.getString("amount"));
+                        }
+                    }
+                    if(a<=0){
+                        JOptionPane.showMessageDialog(null,"Please enter valid amount");
+                        return;
+                    }
+                    if( a>balance ) {
+                         JOptionPane.showMessageDialog(null,"Insufficient Balance");
+                         setVisible(false);
+                         new Transactions(pin).setVisible(true);
+                    }
+                    else {
+                        String query = "insert into transaction values ('" + pin + "','" + date + "','Withdrawl','" + amount + "')";
+                        conn.st.executeUpdate(query);
+                        JOptionPane.showMessageDialog(null, "Rs " + amount + " Withdraw Successfully");
+                        setVisible(false);
+                        new Transactions(pin).setVisible(true);
+                    }
                 }
             }
             catch (Exception e){

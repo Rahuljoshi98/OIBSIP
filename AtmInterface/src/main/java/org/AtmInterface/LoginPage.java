@@ -13,7 +13,7 @@ public class LoginPage extends JFrame implements ActionListener {
     LoginPage(){
         setTitle("WELCOME TO THE BANK OF BARODA ATM");
 
-        setLayout(null);                  //to ignore the default layout and create our layout
+        setLayout(null);                  //to ignore the default layout and create our own layout
         ImageIcon image = new ImageIcon(ClassLoader.getSystemResource("logo.png"));
         Image i2 = image.getImage().getScaledInstance(100,100,Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);

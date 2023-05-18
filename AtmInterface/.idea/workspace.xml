@@ -60,8 +60,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ChangePin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.AtmInterface.ChangePin" />
+    <configuration name="CashWithdrawl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.AtmInterface.CashWithdrawl" />
       <module name="AtmInterface" />
       <extension name="coverage">
         <pattern>
@@ -115,10 +115,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.LoginPage" />
+        <item itemvalue="Application.CashWithdrawl" />
         <item itemvalue="Application.SignUpFirst" />
         <item itemvalue="Application.BalanceEnquiry" />
         <item itemvalue="Application.Transactions" />
-        <item itemvalue="Application.ChangePin" />
       </list>
     </recent_temporary>
   </component>
